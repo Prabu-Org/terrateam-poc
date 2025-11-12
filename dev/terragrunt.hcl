@@ -13,6 +13,6 @@ remote_state {
     }
 }
 
-input = {
+inputs= {
     message = "HI FROM Terrateam support"
 }
