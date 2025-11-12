@@ -2,20 +2,14 @@ engine:
   name: terragrunt
   version: 0.69.3
 dirs:
-  "**/terragrunt.hcl":
+  "dev":
     when_modified:
       file_patterns:
-        - "${DIR}/terragrunt.hcl"
-        - "${DIR}/**/*.tf"
-        - "${DIR}/**/*.tfvars"
-        - "${DIR}/**/*.auto.tfvars"
+        - "terragrunt.hcl"
   ".":
     when_modified:
       file_patterns:
         - "terragrunt.hcl"
-        - "**/*.tf"
-        - "**/*.tfvars"
-        - "**/*.auto.tfvars"
 
 workflows:
   - lock_policy: strict
