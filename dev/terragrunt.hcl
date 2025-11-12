@@ -1,5 +1,5 @@
 terraform {
-    source = "./module"
+    source = "../module"
 }
 
 remote_state {
@@ -14,5 +14,5 @@ remote_state {
 }
 
 input = {
-    message = "HI FROM Terrateam "
+    message = "HI FROM Terratem "
 }
