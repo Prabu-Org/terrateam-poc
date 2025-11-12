@@ -14,5 +14,5 @@ remote_state {
 }
 
 input = {
-    message = "HI FROM Terrateam "
+    message = "HI FROM Terrateam welcome all "
 }
