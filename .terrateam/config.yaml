@@ -5,6 +5,10 @@ dirs:
     when_modified:
       file_patterns:
         - "terragrunt.hcl"
+  ".":
+    when_modified:
+      file_patterns:
+        - "terragrunt.hcl
 
 workflows:
 - apply:
@@ -14,7 +18,6 @@ workflows:
     type: apply
   engine:
     name: terragrunt
-  environment: aptitude-infra-core
   plan:
   - extra_args: []
     type: init
