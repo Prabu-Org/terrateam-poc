@@ -1,6 +1,8 @@
 engine:
   name: terragrunt
-  version: 0.69.3
+  tf_cmd: terraform
+  tf_version: 1.13.3
+  version: 0.87.5
 dirs:
   "dev":
     when_modified:
@@ -12,12 +14,20 @@ dirs:
         - "terragrunt.hcl"
 
 workflows:
-  - lock_policy: strict
-    tag_query: ""
-    terragrunt: true
-    plan:
-      - type: init
-      - type: plan
-    apply:
-      - type: init
-      - type: apply
+- apply:
+  - extra_args: []
+    type: init
+  - extra_args: []
+    type: apply
+  engine:
+    name: terragrunt
+    tf_cmd: terraform
+    tf_version: 1.13.3
+    version: 0.87.5
+  environment: aptitude-infra-core
+  plan:
+  - extra_args: []
+    type: init
+  - extra_args: []
+    type: plan
+  tag_query: ''
