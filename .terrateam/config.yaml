@@ -5,10 +5,6 @@ dirs:
     when_modified:
       file_patterns:
         - "terragrunt.hcl"
-  ".":
-    when_modified:
-      file_patterns:
-        - "terragrunt.hcl"
 
 workflows:
 - apply:
