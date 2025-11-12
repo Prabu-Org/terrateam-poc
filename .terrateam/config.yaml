@@ -7,7 +7,8 @@ dirs:
       file_patterns: ['${DIR}/terragrunt.hcl']
   '.':
     when_modified:
-      file_patterns: []
+      file_patterns: 
+        - "terragrunt.hcl"
 
 workflows:
   - lock_policy: strict
