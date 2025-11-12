@@ -4,7 +4,7 @@ dirs:
   "dev":
     when_modified:
       file_patterns:
-        - "terragrunt.hcl"
+        - "${DIR}/terragrunt.hcl"
 
 workflows:
 - apply:
