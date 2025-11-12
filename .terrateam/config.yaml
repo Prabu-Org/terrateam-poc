@@ -7,8 +7,7 @@ dirs:
         - "terragrunt.hcl"
   ".":
     when_modified:
-      file_patterns:
-        - "terragrunt.hcl"
+      file_patterns: []
 
 workflows:
 - apply:
