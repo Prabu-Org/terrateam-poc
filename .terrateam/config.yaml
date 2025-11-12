@@ -8,3 +8,14 @@ dirs:
   '.':
     when_modified:
       file_patterns: []
+
+workflows:
+  - lock_policy: strict
+    tag_query: ""
+    terragrunt: true
+    plan:
+      - type: init
+      - type: plan
+    apply:
+      - type: init
+      - type: apply
