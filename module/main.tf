@@ -9,7 +9,7 @@ terraform {
 
 variable "message" {
   type = string
-  default = "Hello HI"
+  default = "Hello HI default"
 }
 
 resource "null_resource" "hello" {
