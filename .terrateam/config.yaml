@@ -1,8 +1,5 @@
 engine:
   name: terragrunt
-  tf_cmd: terraform
-  tf_version: 1.13.3
-  version: 0.87.5
 dirs:
   "dev":
     when_modified:
@@ -21,9 +18,6 @@ workflows:
     type: apply
   engine:
     name: terragrunt
-    tf_cmd: terraform
-    tf_version: 1.13.3
-    version: 0.87.5
   environment: aptitude-infra-core
   plan:
   - extra_args: []
