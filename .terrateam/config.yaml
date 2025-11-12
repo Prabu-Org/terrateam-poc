@@ -1,23 +1,22 @@
 engine:
   name: terragrunt
-  version: 0.69.3
 dirs:
   "dev":
     when_modified:
       file_patterns:
-        - "terragrunt.hcl"
-  ".":
-    when_modified:
-      file_patterns:
-        - "terragrunt.hcl"
+        - "${DIR}/terragrunt.hcl"
 
 workflows:
-  - lock_policy: strict
-    tag_query: ""
-    terragrunt: true
-    plan:
-      - type: init
-      - type: plan
-    apply:
-      - type: init
-      - type: apply
+- apply:
+  - extra_args: []
+    type: init
+  - extra_args: []
+    type: apply
+  engine:
+    name: terragrunt
+  plan:
+  - extra_args: []
+    type: init
+  - extra_args: []
+    type: plan
+  tag_query: ""
