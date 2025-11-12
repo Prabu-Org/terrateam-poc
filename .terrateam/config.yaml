@@ -1,7 +1,7 @@
 engine:
   name: terragrunt
 dirs:
-  "dev":
+  ".":
     when_modified:
       file_patterns:
         - "terragrunt.hcl"
